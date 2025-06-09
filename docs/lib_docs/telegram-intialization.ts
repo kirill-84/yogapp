@@ -121,4 +121,5 @@ createTelegramUserWithServiceRole()
   });
 
 // Пример запуска из командной строки:
-// NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co SUPABASE_SERVICE_KEY=your-service-key node telegram-initialization.js 
+// NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+// SUPABASE_SERVICE_KEY=your-service-key node telegram-initialization.js

@@ -10,7 +10,9 @@ CREATE TABLE IF NOT EXISTS public.users (
   hash TEXT NOT NULL,
   last_login TIMESTAMPTZ DEFAULT now(),
   created_at TIMESTAMPTZ DEFAULT now(),
-  updated_at TIMESTAMPTZ DEFAULT now()
+  updated_at TIMESTAMPTZ DEFAULT now(),
+  is_admin BOOLEAN DEFAULT false,
+  access_till TIMESTAMPTZ
 );
 
 -- Создаем индекс по telegram_id для быстрого поиска

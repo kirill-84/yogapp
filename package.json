@@ -13,7 +13,7 @@
     "lint:fix": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "update-durations": "vite-node scripts/updateDurations.js"
+    "update-durations": "vite-node scripts/run-update-durations.cjs"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.810.0",
