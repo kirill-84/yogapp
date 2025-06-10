@@ -79,7 +79,7 @@ export function useSupabaseUser(initDataRaw: TelegramInitDataType | undefined): 
         .from('users')
         .select('*')
         .eq('telegram_id', userData.id)
-        .single();
+        .maybeSingle();
 
       if (selectError && selectError.code !== 'PGRST116') { // PGRST116 - "No rows found"
         throw selectError;
@@ -101,7 +101,7 @@ export function useSupabaseUser(initDataRaw: TelegramInitDataType | undefined): 
           .update(updates)
           .eq('telegram_id', userData.id)
           .select('*')
-          .single();
+          .maybeSingle();
 
         if (updateError) {
           throw updateError;
@@ -126,7 +126,7 @@ export function useSupabaseUser(initDataRaw: TelegramInitDataType | undefined): 
           .from('users')
           .insert(newUserPayload)
           .select('*')
-          .single();
+          .maybeSingle();
 
         if (insertError) {
           throw insertError;

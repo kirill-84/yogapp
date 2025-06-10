@@ -100,7 +100,7 @@ const CategoriesManager: React.FC = () => {
         .select('display_order')
         .order('display_order', { ascending: false })
         .limit(1)
-        .single();
+        .maybeSingle();
       
       const newOrder = maxOrderData?.display_order ? maxOrderData.display_order + 1 : 1;
       
